@@ -29,7 +29,7 @@
   ],
   "license": "ISC",
   "main": "dist/lib/index.js",
-  "name": "functions-before",
+  "name": "@dizmo/functions-before",
   "repository": {
     "type": "git",
     "url": ""
