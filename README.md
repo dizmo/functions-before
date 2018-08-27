@@ -22,7 +22,9 @@ import { before } from "@dizmo/functions-before";
 const f1 = (value: number): number => {
     return value;
 };
-const f2 = before(f1, (fn: Function, value: number): boolean|undefined => {
+const f2 = before(f1, (
+    fn: Function, value: number
+): boolean|undefined => {
     const expect = value === 0 || value === 1;
 });
 const expect = f2(0) === 0;
@@ -30,7 +32,9 @@ const expect = f2(1) === 1;
 ```
 ```typescript
 class Class {
-    @before.decorator((fn: Function, value: number): boolean|undefined => {
+    @before.decorator((
+        fn: Function, value: number
+    ): boolean|undefined => {
         return false; // blocks method invocation!
     })
     public method(value: number): number {
