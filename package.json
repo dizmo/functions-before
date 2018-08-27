@@ -32,7 +32,7 @@
   "name": "@dizmo/functions-before",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/dizmo/functions-before.git"
   },
   "scripts": {
     "build": "node ./cli/run-build.js",
