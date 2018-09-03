@@ -27,8 +27,8 @@ const f2 = before(f1, (
 ): boolean|undefined => {
     const expect = value === 0 || value === 1;
 });
-const expect = f2(0) === 0;
-const expect = f2(1) === 1;
+const expect0 = f2(0) === 0;
+const expect1 = f2(1) === 1;
 ```
 ```typescript
 class Class {
@@ -41,8 +41,8 @@ class Class {
         return value;
     }
 }
-const expect = new Class().method(0) === undefined;
-const expect = new Class().method(1) === undefined;
+const expect0 = new Class().method(0) === undefined;
+const expect1 = new Class().method(1) === undefined;
 ```
 ## Development
 ### Build
