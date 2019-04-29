@@ -3,21 +3,29 @@
 [![Coverage Status](https://coveralls.io/repos/github/dizmo/functions-before/badge.svg?branch=master)](https://coveralls.io/github/dizmo/functions-before?branch=master)
 
 # @dizmo/functions-before
+
 Returns a function decorating an original function with a callback, which will be invoked before the execution of the original function. The callback can block the invocation of the original function by returning `false`.
 
 ## Usage
+
 ### Install
+
 ```sh
 npm install @dizmo/functions-before --save
 ```
+
 ### Require
+
 ```javascript
 let lib = require("@dizmo/functions-before");
 ```
+
 ### Examples
+
 ```typescript
 import { before } from "@dizmo/functions-before";
 ```
+
 ```typescript
 const f1 = (value: number): number => {
     return value;
@@ -30,6 +38,7 @@ const f2 = before(f1, (
 const expect0 = f2(0) === 0;
 const expect1 = f2(1) === 1;
 ```
+
 ```typescript
 class Class {
     @before.decorator((
@@ -44,36 +53,65 @@ class Class {
 const expect0 = new Class().method(0) === undefined;
 const expect1 = new Class().method(1) === undefined;
 ```
+
 ## Development
+
 ### Build
+
 ```sh
 npm run build
 ```
+
 #### without linting:
+
 ```sh
 npm run -- build --no-lint
 ```
+
+#### with UMD support (incl. minimization):
+
+```sh
+npm run -- build --prepack
+```
+
+#### with UMD support (excl. minimization):
+
+```sh
+npm run -- build --prepack --no-minify
+```
+
 ### Lint
+
 ```sh
 npm run lint
 ```
-#### with auto-fixing (for JavaScript and TypeScript):
+
+#### with auto-fixing:
+
 ```sh
 npm run -- lint --fix
 ```
+
 ### Test
+
 ```sh
 npm run test
 ```
+
 #### without (re-)building:
+
 ```sh
 npm run -- test --no-build
 ```
+
 ### Cover
+
 ```sh
 npm run cover
 ```
+
 #### without (re-)building:
+
 ```sh
 npm run -- cover --no-build
 ```
