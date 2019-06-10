@@ -1,4 +1,3 @@
-/* tslint:disable:ban-types */
 import { expect } from "chai";
 import { before } from "../lib";
 

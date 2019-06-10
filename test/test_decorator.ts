@@ -1,4 +1,3 @@
-/* tslint:disable:ban-types max-classes-per-file */
 import { expect } from "chai";
 import { before } from "../lib";
 
@@ -43,7 +42,7 @@ describe("before.decorator", () => {
                 return false; // block!
             })
             public method(...args: any[]) {
-                throw new Error("should not be thrown");
+                throw new Error(`"should not be thrown: ${args}`);
             }
         }
         expect(new Class().method(true)).to.eq(undefined);

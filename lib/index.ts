@@ -1,4 +1,3 @@
-/* tslint:disable:ban-types callable-types */
 import { before as _before } from "./before";
 import { decorator as _decorator } from "./decorator";
 
@@ -12,5 +11,4 @@ export const before: IBeforeFunction = (() => {
     (_before as any).decorator = _decorator;
     return _before as any;
 })();
-
 export default before;

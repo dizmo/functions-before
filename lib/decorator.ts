@@ -1,4 +1,3 @@
-/* tslint:disable:ban-types */
 import { before } from "./before";
 
 /**
@@ -11,7 +10,6 @@ import { before } from "./before";
 export function decorator(callback: Function): MethodDecorator {
     return _decorator(callback);
 }
-
 function _decorator(callback: Function): MethodDecorator {
     return (
         tgt: any, key: string|symbol, tpd?: PropertyDescriptor,
@@ -24,5 +22,4 @@ function _decorator(callback: Function): MethodDecorator {
         }
     };
 }
-
 export default decorator;

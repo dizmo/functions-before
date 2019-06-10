@@ -1,5 +1,3 @@
-/* tslint:disable:ban-types trailing-comma */
-
 /**
  * Returns a method decorator taking a callback, which will be invoked
  * before the execution of the decorated function, *unless* the callback
@@ -10,7 +8,7 @@
  */
 export function before(
     fn: Function, callback: Function
-) {
+): Function {
     return function(
         this: any, ...args: any[]
     ) {
@@ -21,5 +19,4 @@ export function before(
         }
     };
 }
-
 export default before;
