@@ -17,7 +17,7 @@ npm install @dizmo/functions-before --save
 ### Require
 
 ```javascript
-let lib = require("@dizmo/functions-before");
+const { before } = require("@dizmo/functions-before");
 ```
 
 ### Examples
